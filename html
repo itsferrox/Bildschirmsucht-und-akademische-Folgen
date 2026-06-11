@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildschirmsucht & Akademische Folgen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Bildschirmzeit-Studie</h1>
+            <ul>
+                <li><a href="#rechner">Rechner</a></li>
+                <li><a href="#ergebnisse">Ergebnisse</a></li>
+                <li><a href="#umfrage">Umfrage</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h2>Welche akademischen Folgen hat Bildschirmsucht für die heutige Nachwuchsgeneration?</h2>
+        <p>Entdecke die Ergebnisse unserer Studie und berechne, wie viel Zeit deines Lebens du voraussichtlich am Bildschirm verbringen wirst.</p>
+    </header>
+
+    <main>
+        <section id="rechner" class="section-container">
+            <div class="card">
+                <h3>Interaktiver Bildschirmzeit-Rechner</h3>
+                <p class="subtitle">Finde heraus, wie viel Zeit du bis zu deinem 85. Lebensjahr am Handy verbringen wirst.</p>
+                
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="age">Dein aktuelles Alter: <span id="age-val">16</span> Jahre</label>
+                        <input type="range" id="age" min="10" max="85" value="16">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="screenTime">Tägliche Bildschirmzeit: <span id="time-val">4</span> Stunden</label>
+                        <input type="range" id="screenTime" min="0" max="24" step="0.5" value="4">
+                    </div>
+                </div>
+
+                <div class="calculator-results">
+                    <h4>Deine verbleibende Bildschirmzeit:</h4>
+                    <div class="results-grid">
+                        <div class="result-box"><span id="res-jahre">0</span><br><small>Jahre</small></div>
+                        <div class="result-box"><span id="res-monate">0</span><br><small>Monate</small></div>
+                        <div class="result-box"><span id="res-wochen">0</span><br><small>Wochen</small></div>
+                        <div class="result-box"><span id="res-tage">0</span><br><small>Tage</small></div>
+                    </div>
+                </div>
+
+                <div class="calculator-comparisons">
+                    <h4>In dieser Zeit könntest du stattdessen:</h4>
+                    <ul>
+                        <li>🚢 <strong id="comp-titanic">0</strong> Mal den Film "Titanic" schauen</li>
+                        <li>🏫 <strong id="comp-schule">0</strong> Schultage absolvieren</li>
+                        <li>🌍 <strong id="comp-erde">0</strong> Mal die Erde zu Fuß umrunden</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="ergebnisse" class="section-container">
+            <h3 class="section-title">Unsere Umfrage-Ergebnisse</h3>
+            
+            <div class="card chart-card">
+                <h4>Hypothese 1: Alter vs. Bildschirmzeit</h4>
+                <div class="chart-container">
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="analysis-text">
+                    <p><strong>Analyse:</strong> Es fällt auf, dass bei den Angehörigen der 14-17-jährigen Gruppe eine grosse Streuung besteht; die Altersgruppe weist Bildschirmzeiten von unter einer Stunde bis zu 9-10 Stunden auf. Diese Streuung ist bei der 18-21-jährigen Gruppe und bei den Befragten über 30 Jahren deutlich kleiner. Die häufigste Bildschirmzeit befindet sich nach wie vor bei allen Altersklassen im mittleren Bereich bei 3-4 Stunden. Es tendieren mehr Jugendliche zu höheren Bildschirmzeiten als Erwachsene, was unsere Hypothese teils bestätigt.</p>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h4>Hypothese 2: Notenschnitt vs. Bildschirmzeit</h4>
+                <div class="analysis-text">
+                    <p><strong>Analyse:</strong> Bei genauerer Betrachtung fällt auf, dass die Noten recht undiskriminierend verteilt sind. Sowohl Leute mit Notenschnitt 4 als auch Leute mit Notenschnitt 5.5 haben eine tägliche Bildschirmzeit zwischen 3-4 Stunden. Es ist hier kein negativer Zusammenhang zwischen Bildschirmzeit und Notenschnitt zu erkennen; höhere Bildschirmzeit führt nicht automatisch zu schlechten Noten und vice versa. Die Art der Bildschirmnutzung scheint wichtiger zu sein als die reine Zeit.</p>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h4>Hypothese 3: Akademischer Werdegang vs. Bildschirmzeit</h4>
+                <div class="analysis-text">
+                    <p><strong>Analyse:</strong> Das Diagramm ist wegen der hohen Anzahl von Gymnasiumsschülern statistisch leicht verzerrt, doch es lässt sich trotzdem herausarbeiten, dass auch hier kein offensichtlicher Unterschied besteht; entlang aller Optionen verbringt der Grossteil der Befragten nach wie vor zwischen 3-6 Stunden pro Tag am Handy.</p>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h4>Hypothese 4: Anzahl Social Media vs. Bildschirmzeit</h4>
+                <div class="analysis-text">
+                    <p><strong>Analyse:</strong> Hier zeigt sich eine gewisse Tendenz: Nutzer mit <1 bis 2 Stunden Bildschirmzeit haben zum Grossteil nur 1-3 soziale Medien, also tendenziell weniger. Ebenso besitzen Nutzer mit 7-8 Stunden Bildschirmzeit allgemein mehr soziale Medien (um die 4-5). Unsere Hypothese ist somit hauptsächlich bestätigt.</p>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h4>Hypothese 5: Einschätzung vs. Tatsächliche Zeit</h4>
+                <div class="analysis-text">
+                    <p><strong>Analyse:</strong> Schon auf den ersten Blick lässt sich erkennen, dass die meisten Teilnehmer ihre Bildschirmzeit recht genau einschätzen. Zusammenfassend lässt sich sagen, dass bei wenigen Nutzern ein Drang zur Überschätzung oder Unterschätzung vorhanden ist, allerdings nicht genug, um unsere psychologische Hypothese zu rechtfertigen.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="umfrage" class="section-container">
+            <div class="card text-center">
+                <h3>Nimm an unserer Umfrage teil</h3>
+                <p>Hilf uns, unsere Daten zu verbessern! Die Teilnahme ist komplett anonym und dauert nur etwa 2 Minuten. Klicke auf den untenstehenden Button, um zum Microsoft Forms-Fragebogen zu gelangen.</p>
+                <br>
+                <a href="#" class="btn-primary" target="_blank">Zur Umfrage (Microsoft Forms)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bildschirmzeit-Projekt | Erstellt für Forschungszwecke</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
